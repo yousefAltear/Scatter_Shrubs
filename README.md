@@ -1,1 +1,2 @@
-![Shrubs Scatter Logo ](https://github.com/user-attachments/assets/22014508-bdde-45ff-984d-8b523cd8b2f5)
+
+Created a script for automating shrub placement on a selected surface for rendering purposes. The process begins by defining the surface area, followed by generating offsets at specified intervals. These offsets are then divided across the surface to ensure even shrub distribution. The script places shrubs along the offsets in a single click, eliminating manual positioning. Parameters for shrub spacing and density can be customized, ensuring flexibility for various landscape designs. This tool significantly reduces time spent on arranging foliage for visualizations while enhancing accuracy and consistency in the rendered output.
