@@ -1,8 +1,10 @@
-### Shrubs_Scatter Tool
-
+**Shrubs_Scatter Tool**
 ![1323](https://github.com/user-attachments/assets/ef316089-6751-44cb-9eda-63d60079a062)
+<p align="center">
+Created a script for automating shrub placement on a selected surface for rendering purposes. The process begins by defining the surface area, followed by generating offsets at specified intervals. These offsets are then divided across the surface to ensure even shrub distribution. The script places shrubs along the offsets in a single click, eliminating manual positioning. Parameters for shrub spacing and density can be customized, ensuring flexibility for various landscape 
+designs. This tool significantly reduces time spent on arranging foliage for visualizations while enhancing accuracy and consistency in the rendered output.
+</p>
 
-Created a script for automating shrub placement on a selected surface for rendering purposes. The process begins by defining the surface area, followed by generating offsets at specified intervals. These offsets are then divided across the surface to ensure even shrub distribution. The script places shrubs along the offsets in a single click, eliminating manual positioning. Parameters for shrub spacing and density can be customized, ensuring flexibility for various landscape designs. This tool significantly reduces time spent on arranging foliage for visualizations while enhancing accuracy and consistency in the rendered output.
 
 ![12343](https://github.com/user-attachments/assets/df341b5c-f986-4c38-8f23-8e47d1747470)
  
