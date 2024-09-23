@@ -1,0 +1,2844 @@
+{
+  "Uuid": "26bcf61d-5801-4042-8a46-6663858a3be9",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "SCATTER V4",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [
+    {
+      "Id": "2c12217ed69848b88a8db0e8e8036272",
+      "Name": "Curve.PointAtSegmentLength",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Get a Point at a particular arc length along the curve\n\nCurve.PointAtSegmentLength (segmentLength: double = 0): Point"
+    },
+    {
+      "Id": "f5c7bc9cfcb64ca1afe67456d3a87619",
+      "Name": "Curve.PointAtSegmentLength",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Get a Point at a particular arc length along the curve\n\nCurve.PointAtSegmentLength (segmentLength: double = 0): Point"
+    }
+  ],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "9ef89fac4dc043d581245870e29ed393",
+      "Inputs": [
+        {
+          "Id": "282fda993ff2429190dd7489ca656831",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "261d64b9c2a042bf8c0e53f1d54b0474",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all of the Geometry associated with this object\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Length",
+      "Id": "b5062289a47f472aa5ecb570cbee06ec",
+      "Inputs": [
+        {
+          "Id": "8db0a9ab7b11439eaf8d4f88219914b9",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2884f485b4d64094a66328e2c4c5fd73",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the total arc length of the curve\n\nCurve.Length: double"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 5.2,
+      "Id": "580dc9bd04fd494585ef0076e62acb77",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c867673261644247bc05a9316374a504",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "length/space;",
+      "Id": "9048b809798e4699a726ce7a3317a66c",
+      "Inputs": [
+        {
+          "Id": "97a7180d0cea4609aaa2e83f150b0da0",
+          "Name": "length",
+          "Description": "length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7c3935594c64a8099b80ef8d5157142",
+          "Name": "space",
+          "Description": "space",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "08e430e7bb884f9cb556b1fa130d13e0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.PointAtSegmentLength@double",
+      "Id": "2c12217ed69848b88a8db0e8e8036272",
+      "Inputs": [
+        {
+          "Id": "8dec401677c842ce8bd73283a4ebe5c1",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c574761198f241b997cc7ebddc20c997",
+          "Name": "segmentLength",
+          "Description": "The distance along the curve at which to evaluate\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1b0646db5a924d638343a9adf8fa7d44",
+          "Name": "Point",
+          "Description": "The point at the given arc length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get a Point at a particular arc length along the curve\n\nCurve.PointAtSegmentLength (segmentLength: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..#n..space;",
+      "Id": "c17f991fbbef42d28d8e6ff428a0b896",
+      "Inputs": [
+        {
+          "Id": "629caa770b4c453cbe5c263046737336",
+          "Name": "n",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8bfee2332cd840a59c2e28fff67f03ae",
+          "Name": "space",
+          "Description": "space",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5dc3c32c87ad446bbef772e8fafed943",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType,Autodesk.DesignScript.Geometry.Point",
+      "Id": "dd8eff63ad6042babb399d979f605b1a",
+      "Inputs": [
+        {
+          "Id": "e510b4c55ced4674a4e526f9851db8e7",
+          "Name": "familyType",
+          "Description": "Family Type. Also called Family Symbol.\n\nFamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4cb2c5961b8f4155913f12960cac5d4e",
+          "Name": "point",
+          "Description": "Point in meters.\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a6399727c5404dbfa33b189d60f40243",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Place a Revit FamilyInstance given the FamilyType (also known as the FamilySymbol in the Revit API) and its coordinates in world space\n\nFamilyInstance.ByPoint (familyType: FamilyType, point: Point): FamilyInstance"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementsSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba507",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba508",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba509",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50a",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50b",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50c",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50d",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50e",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50f",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba510"
+      ],
+      "Id": "6dcfc5f00c8f48c3b127aacb585dfa20",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "178d2aa213984bef84b8340be00b66db",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "c00421f854f744478999b309e036a11a",
+      "Inputs": [
+        {
+          "Id": "b232365eb3b6419fbe1c2e58b3306a71",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b89c0db22b94c578dfed60c818b3fdd",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6cc806a52d54a9494afbcea754c5c2e",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5ff9c8b64f014b07b7456c4d36aa1e53",
+          "Name": "item3",
+          "Description": "Item Index #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7b57509856a247a1b7fcc7738a2dd86b",
+          "Name": "item4",
+          "Description": "Item Index #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31abd96636f64c389f656fbd66c95b82",
+          "Name": "item5",
+          "Description": "Item Index #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94554dab272c4d58972a7e45a5e0340e",
+          "Name": "item6",
+          "Description": "Item Index #6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f16132413bfb4ee58bff7b97c1cd0208",
+          "Name": "item7",
+          "Description": "Item Index #7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c0dd5e7b22b644669a00465f9fc76060",
+          "Name": "item8",
+          "Description": "Item Index #8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ead06ed753d04eeeb5c40dde56231a27",
+          "Name": "item9",
+          "Description": "Item Index #9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0758ba92c91940f9a4e0f40cf51f64b0",
+          "Name": "item10",
+          "Description": "Item Index #10",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f587a7cd414048568fa89c4f474cfe38",
+          "Name": "item11",
+          "Description": "Item Index #11",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e52ee6f541e942efa72159fdaf2f5d73",
+          "Name": "item12",
+          "Description": "Item Index #12",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "51037b7beab1430c8328aea4dc871bc7",
+          "Name": "item13",
+          "Description": "Item Index #13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3c091144d4964dfaa3be780138adfef9",
+          "Name": "item14",
+          "Description": "Item Index #14",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a64231e12b0b44e3b77f4d5f97b0849e",
+          "Name": "item15",
+          "Description": "Item Index #15",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e635fb6da37846959ce3cb09f140698e",
+          "Name": "item16",
+          "Description": "Item Index #16",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d59b1b7ca3eb4bc8ae30866dab485e64",
+          "Name": "item17",
+          "Description": "Item Index #17",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b1dbac4554cf4f5aa9923e641cdfb010",
+          "Name": "item18",
+          "Description": "Item Index #18",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d16cd15829e449768b94ff0a50d9b935",
+          "Name": "item19",
+          "Description": "Item Index #19",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a6d9d97b24541bca57f11d1745df218",
+          "Name": "item20",
+          "Description": "Item Index #20",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "775c489cfdbc4a7b9cc46922e85b5b20",
+          "Name": "item21",
+          "Description": "Item Index #21",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ca53f5662a784c96972b38ec11b610b1",
+          "Name": "item22",
+          "Description": "Item Index #22",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "852f013e03624590bd3dc9f70dd9cc66",
+          "Name": "item23",
+          "Description": "Item Index #23",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "217d053ee655412a95926553ec4e8c34",
+          "Name": "item24",
+          "Description": "Item Index #24",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0ab2ef5699a74844bb08282013382c7c",
+          "Name": "item25",
+          "Description": "Item Index #25",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8c641e4ef2384923a46617d0d0224d07",
+          "Name": "item26",
+          "Description": "Item Index #26",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7a59ee62c9bf4026ac6fc133620c10bf",
+          "Name": "item27",
+          "Description": "Item Index #27",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e08bfedfcb2e4404bf28b7fab18d5a47",
+          "Name": "item28",
+          "Description": "Item Index #28",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4de003e414d24341a997a3670bd601fe",
+          "Name": "item29",
+          "Description": "Item Index #29",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f45f43b9b0c34ffc93fa6d8b43ed80d6",
+          "Name": "item30",
+          "Description": "Item Index #30",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e5f3ebe9933d4a7f8fbbfb298d707d83",
+          "Name": "item31",
+          "Description": "Item Index #31",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8467aaf6c28d4f7a8113cd35f2eaebaa",
+          "Name": "item32",
+          "Description": "Item Index #32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "48461adc917641cb8a6c9e303f168387",
+          "Name": "item33",
+          "Description": "Item Index #33",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "50502daf093940cca6ed81b58e95c1b7",
+          "Name": "item34",
+          "Description": "Item Index #34",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aa6d11633b294b898386ac498f501cf2",
+          "Name": "item35",
+          "Description": "Item Index #35",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cdbd14c624954c0db1e18636ade457b1",
+          "Name": "item36",
+          "Description": "Item Index #36",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "059400d070a1440d8f9dcf74a58c7402",
+          "Name": "item37",
+          "Description": "Item Index #37",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a465e0e20824f3da7ef39f84eed9a88",
+          "Name": "item38",
+          "Description": "Item Index #38",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b53b55c5f14d435e9da65d44d7422c38",
+          "Name": "item39",
+          "Description": "Item Index #39",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da1667f8388b488f92672f3f8ad62fb1",
+          "Name": "item40",
+          "Description": "Item Index #40",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7388effd42f24b17bf83eeb65173fd0f",
+          "Name": "item41",
+          "Description": "Item Index #41",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7edc026f49b4371ac0bd23ef3a0cd45",
+          "Name": "item42",
+          "Description": "Item Index #42",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d8b153dbb1614ecab0b853d401a70f7a",
+          "Name": "item43",
+          "Description": "Item Index #43",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "53c673f9c50e4c8188a7c003e707ca45",
+          "Name": "item44",
+          "Description": "Item Index #44",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "edc65f6493dc40558c1c94f72296e98f",
+          "Name": "item45",
+          "Description": "Item Index #45",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e2e6d418794c48eca4168263e5d150f4",
+          "Name": "item46",
+          "Description": "Item Index #46",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6ed5e2b8c05a4a358a6ef45c5311dfb6",
+          "Name": "item47",
+          "Description": "Item Index #47",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "419cf868fdd34470adcabe44d05f5fbe",
+          "Name": "item48",
+          "Description": "Item Index #48",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f224bfe2dc674db284069bb1579c24ad",
+          "Name": "item49",
+          "Description": "Item Index #49",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "acd16880f3b245c3af5ad31df96b7681",
+          "Name": "item50",
+          "Description": "Item Index #50",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "94e8adf3692f432aa902531a990c75f0",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "5f96bbf9eac640088f5cac75311534e5",
+      "Inputs": [
+        {
+          "Id": "6b8ed0aad16844a3b2d933b7871dfd1e",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ee28583da7b1426ca17fc78433eea677",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "343336e797dd47f6ba1d35fe49c9993d",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "688981dc138c4637bf961953dfd4ab12",
+      "Inputs": [
+        {
+          "Id": "de22d58812a34d9680fae07b9612b955",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6bcb49a4881844eda336509bcd450f5b",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fd694b1e9c2e4ff6a850a10354d08742",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 439,
+      "SelectedString": "WTS_Shrubs_Detailed:Flowers",
+      "NodeType": "ExtensionNode",
+      "Id": "0cbcac2b63c244e5a69dcab800964246",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ca36e679d52c4c8faddd530a0d6ef92a",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 440,
+      "SelectedString": "WTS_Shrubs_Detailed:Small Bush",
+      "NodeType": "ExtensionNode",
+      "Id": "c0bfca54c8894057951b38320e627f8d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9936874c091b4ad38e30711f7dc2f592",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 438,
+      "SelectedString": "WTS_Shrubs_Detailed:Bush",
+      "NodeType": "ExtensionNode",
+      "Id": "f68ee1f2558d4068a0fb0f4c4814dff2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4d4ccfb332f94edb986fd3aa8f616098",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementsSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba507",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba508",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba509",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50a",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50b",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50c",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50d",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50e",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba50f",
+        "cef79013-3da1-46ac-8db7-a14c1faacb31-005ba510"
+      ],
+      "Id": "cccba1ebffa44b2bac53b80f424b74d9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "082e61db42cc4c7f881be4492547ad3c",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "b5b35bb7f1564c88b2afe37ffe6392a1",
+      "Inputs": [
+        {
+          "Id": "b9b3a8bc9474433096715dc33f8ee85f",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4e7d38b8278841ef84d2e24c0d000570",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all of the Geometry associated with this object\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 5.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 0.6,
+      "Id": "eb5eaca2e30f47128382676cbcad8e31",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9d3d472b57c140109dd0d8a1d81c05d0",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType,Autodesk.DesignScript.Geometry.Point",
+      "Id": "e0b14520cee945b6af39728a79324972",
+      "Inputs": [
+        {
+          "Id": "c1d9a8aacc73435bade18d829740148a",
+          "Name": "familyType",
+          "Description": "Family Type. Also called Family Symbol.\n\nFamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3dd178fadba6450ba18a7481d8b2beb2",
+          "Name": "point",
+          "Description": "Point in meters.\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6a765434e2074d91bf2c9f13f7f627d5",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Place a Revit FamilyInstance given the FamilyType (also known as the FamilySymbol in the Revit API) and its coordinates in world space\n\nFamilyInstance.ByPoint (familyType: FamilyType, point: Point): FamilyInstance"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "108b2f4e92444932a5b75484fba671f4",
+      "Inputs": [
+        {
+          "Id": "afd6f08fed4c4bdc805913f2d097f7c1",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9c6416dcd87452cbdfd37c652d5c056",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e95845cfaea241bd89cdbbfdca78c835",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "a75f94c854c04e58851c3d739c75a449",
+      "Inputs": [
+        {
+          "Id": "060ae573c9f742b9865894b15188c031",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fbcbb9877a4e42b8ace014ed4eec7e80",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "83146df7f8764ca49468e67c77ed3332",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.PointAtSegmentLength@double",
+      "Id": "f5c7bc9cfcb64ca1afe67456d3a87619",
+      "Inputs": [
+        {
+          "Id": "7fcba7f438ee43d8a2909bea01b629ac",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "38da0d0834d64e2eb123f1fd6942a5c0",
+          "Name": "segmentLength",
+          "Description": "The distance along the curve at which to evaluate\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8cfe57c25b694942ba0d5ec275efca6d",
+          "Name": "Point",
+          "Description": "The point at the given arc length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get a Point at a particular arc length along the curve\n\nCurve.PointAtSegmentLength (segmentLength: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..#n..space;",
+      "Id": "8e69c56ee2674510a128d352fc1debb4",
+      "Inputs": [
+        {
+          "Id": "7a952abef6804d0aad1c0b581614779f",
+          "Name": "n",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e1286175e16548afa1b2ad58fc40bfc6",
+          "Name": "space",
+          "Description": "space",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "40ce2992579a4176bdd9f622792118c8",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "length/space;",
+      "Id": "526e064dc1fb4723a1812ae51725a81f",
+      "Inputs": [
+        {
+          "Id": "eb84ca6c6839470eb2ea9b82c4e8d11e",
+          "Name": "length",
+          "Description": "length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3bbd858e2ca84673911e48525c4e69de",
+          "Name": "space",
+          "Description": "space",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "633eb4dbd67b4fccb66ae29a4fba9d59",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Length",
+      "Id": "f4a933149c524c21afa3070a988afd76",
+      "Inputs": [
+        {
+          "Id": "96fdf3ce76924789a3f0cddf257be615",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1ff221d1b684450c9f9ea49ebc9d27f1",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the total arc length of the curve\n\nCurve.Length: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Polygon.ByPoints@Autodesk.DesignScript.Geometry.Point[]",
+      "Id": "9f87cbc575b141b8aadd2b5f18d6020c",
+      "Inputs": [
+        {
+          "Id": "72da425bd41e4be293f3e3fe1908a048",
+          "Name": "points",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a586d4bc4a714226a69f821b6750e27f",
+          "Name": "Polygon",
+          "Description": "Polygon",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Construct a Polygon Curve by connecting Points.\n\nPolygon.ByPoints (points: Point[]): Polygon"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve",
+      "Id": "3785a5958581430da63c39de29763403",
+      "Inputs": [
+        {
+          "Id": "a5e61693973b4d02bea4c5d0df1a9fbc",
+          "Name": "closedCurve",
+          "Description": "Closed curve used as surface boundary\n\nCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e47cdb78cd3440b29492bd3b51dbb10b",
+          "Name": "Surface",
+          "Description": "Surface created by patch",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Surface by filling in the interior of a closed boundary defined by input Curves.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.PointAtParameter@double,double",
+      "Id": "d8ee15e9287e41a99e7bcaf09940fffd",
+      "Inputs": [
+        {
+          "Id": "665a7ee279ea4694af68ed32841fdf6f",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5f9c59259e847aca0145a2bb4527a48",
+          "Name": "u",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f29849ec7b4549978885c6d55acd197d",
+          "Name": "v",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f86c5406cb66431294aab72dc2f7ff55",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Return the Point at specified U and V parameters.\n\nSurface.PointAtParameter (u: double = 0, v: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1/a;",
+      "Id": "5bcb7f5392134775992c08d93ecd8158",
+      "Inputs": [
+        {
+          "Id": "ca4dbc5b00e14389860a05b897983d75",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "72d2833a67d440e9a88ddeabc9529c3c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1/a;",
+      "Id": "99eb160744084a3081d9ecf82310fe5c",
+      "Inputs": [
+        {
+          "Id": "068915daaeae4e5fb85eba83d6e3288d",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "55df8f99c26b435c911c08c2c6dd19dd",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..~a;",
+      "Id": "7c3e2702efaa44a9b92c00cae0047d79",
+      "Inputs": [
+        {
+          "Id": "58bd417a7b034ecfb2ed65c6771ead10",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3198ec1227504f4ebc233757123f0d11",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..~a;",
+      "Id": "775c1a5c549a4e299399dfae7b30c703",
+      "Inputs": [
+        {
+          "Id": "57add9ed7406473e9bc66792277abf3c",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "048771184b3743daa054bea2a5205817",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 6.2,
+      "Id": "8f0dfd98838c4695bc2002460187e987",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "92fb58f792664a77a4f3eeaff2011ec2",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 6.2,
+      "Id": "2446c8501b8e47e0b19cc0e75b9a065f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b1ffda2c710146b0b2f364eb5aba140d",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "0c3204f2bb2141f3baf6211ce1431402",
+      "Inputs": [
+        {
+          "Id": "9b8047db986d4fafb06cc3dff12abde6",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "722f8c09abdf4ed8a6650822394ebb95",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "51d942d0373b44099c3a36b10864e27d",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "261d64b9c2a042bf8c0e53f1d54b0474",
+      "End": "8dec401677c842ce8bd73283a4ebe5c1",
+      "Id": "c7b73de5e8f54f878855ad0c3c779c65",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "261d64b9c2a042bf8c0e53f1d54b0474",
+      "End": "8db0a9ab7b11439eaf8d4f88219914b9",
+      "Id": "cc1b28039a484cc9b30a79de4261b3ad",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2884f485b4d64094a66328e2c4c5fd73",
+      "End": "97a7180d0cea4609aaa2e83f150b0da0",
+      "Id": "8e8878d89c834d18a626c0f427a0a7c0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c867673261644247bc05a9316374a504",
+      "End": "8bfee2332cd840a59c2e28fff67f03ae",
+      "Id": "4d35e5ee5ea248f38b5548bf6bfd4685",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c867673261644247bc05a9316374a504",
+      "End": "f7c3935594c64a8099b80ef8d5157142",
+      "Id": "70a54724bcac40dca86808f9537125bd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "08e430e7bb884f9cb556b1fa130d13e0",
+      "End": "629caa770b4c453cbe5c263046737336",
+      "Id": "2315dacb77594632a6dce4d36c91d70e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1b0646db5a924d638343a9adf8fa7d44",
+      "End": "6b8ed0aad16844a3b2d933b7871dfd1e",
+      "Id": "f9dc9753f0594a259b1a7bf833395791",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5dc3c32c87ad446bbef772e8fafed943",
+      "End": "c574761198f241b997cc7ebddc20c997",
+      "Id": "3c98af824bf4400e9879327b0f789932",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "178d2aa213984bef84b8340be00b66db",
+      "End": "282fda993ff2429190dd7489ca656831",
+      "Id": "1ade1110cd43428485d471616c069b77",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "94e8adf3692f432aa902531a990c75f0",
+      "End": "de22d58812a34d9680fae07b9612b955",
+      "Id": "be8d4365099647ee9d85429c64e731a5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "94e8adf3692f432aa902531a990c75f0",
+      "End": "afd6f08fed4c4bdc805913f2d097f7c1",
+      "Id": "411097e95cba4940be9d14cbabb389d9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "343336e797dd47f6ba1d35fe49c9993d",
+      "End": "4cb2c5961b8f4155913f12960cac5d4e",
+      "Id": "bbe87f97c7404ca39eb8102990e8bc7d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd694b1e9c2e4ff6a850a10354d08742",
+      "End": "e510b4c55ced4674a4e526f9851db8e7",
+      "Id": "38d7f7e868e14a1b8f9e851ed636d0ea",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "b232365eb3b6419fbe1c2e58b3306a71",
+      "Id": "7049eed30ed14d5e9d4d82b26dd66ef7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "e6cc806a52d54a9494afbcea754c5c2e",
+      "Id": "3ce1155d667847348de8dba8fbe9eb5e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "7b57509856a247a1b7fcc7738a2dd86b",
+      "Id": "e39014b8b58b4d06bf0a7a421f929f60",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "94554dab272c4d58972a7e45a5e0340e",
+      "Id": "63aef0327a45471bb7032b30fb36698a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "c0dd5e7b22b644669a00465f9fc76060",
+      "Id": "359f66142d6c4fa298d0a699eadcbd06",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "0758ba92c91940f9a4e0f40cf51f64b0",
+      "Id": "6371fe7442e44b8898d03850b2dca4a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "e52ee6f541e942efa72159fdaf2f5d73",
+      "Id": "a7c6d0b81eab4c96a8aa493e0728028e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "3c091144d4964dfaa3be780138adfef9",
+      "Id": "80a3e51fba0542fca8238ae548686889",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "e635fb6da37846959ce3cb09f140698e",
+      "Id": "ba42a43288104e6aa2ff3bd94864708e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "b1dbac4554cf4f5aa9923e641cdfb010",
+      "Id": "b34be541096547deb54b9cc12c16f155",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "ca53f5662a784c96972b38ec11b610b1",
+      "Id": "ddda62a4a26243e39b89bd67ae81b8bb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "217d053ee655412a95926553ec4e8c34",
+      "Id": "b903f4e96e794c5a9f7e8906967b5a82",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "8c641e4ef2384923a46617d0d0224d07",
+      "Id": "8fefb076fc4941028988b4b5be6a2ff2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "e08bfedfcb2e4404bf28b7fab18d5a47",
+      "Id": "6e3826d3175d4c15a8a8ee832d944581",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "f45f43b9b0c34ffc93fa6d8b43ed80d6",
+      "Id": "43de522a2bb84cd1bd2f2bad86b4f6b5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "8467aaf6c28d4f7a8113cd35f2eaebaa",
+      "Id": "6563b13b1c0940798dbdeee4e31089c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "0a6d9d97b24541bca57f11d1745df218",
+      "Id": "676d3b82fbcf453bb7d314f22f442803",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "50502daf093940cca6ed81b58e95c1b7",
+      "Id": "8ad201b43f17448a9ebbd8c69fee87e0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "cdbd14c624954c0db1e18636ade457b1",
+      "Id": "264a04dd7f834031b54f8acdaa223bdc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "0a465e0e20824f3da7ef39f84eed9a88",
+      "Id": "b9cc298a88554074b9c59b18bb36884d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "da1667f8388b488f92672f3f8ad62fb1",
+      "Id": "3560c61f9f82459eaba5137d4c75c61e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "f7edc026f49b4371ac0bd23ef3a0cd45",
+      "Id": "b3bd846aae504448a9f3fa4ae4eb2c2c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "53c673f9c50e4c8188a7c003e707ca45",
+      "Id": "4894437e52e54225a8ff095569dfa8ee",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca36e679d52c4c8faddd530a0d6ef92a",
+      "End": "e2e6d418794c48eca4168263e5d150f4",
+      "Id": "e5252a24951143f7a11d68b4d396f4ba",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "5ff9c8b64f014b07b7456c4d36aa1e53",
+      "Id": "33ff3a855fac42e3b8ab73cdbd6d91bb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "f16132413bfb4ee58bff7b97c1cd0208",
+      "Id": "d25f0c77f96e4522bbc247fe4cb4e20c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "f587a7cd414048568fa89c4f474cfe38",
+      "Id": "151b38c146b9401e8ffe93b4a8007f67",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "a64231e12b0b44e3b77f4d5f97b0849e",
+      "Id": "3b45d3a743a64e1cbb40f6c3edf706d9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "d16cd15829e449768b94ff0a50d9b935",
+      "Id": "3810303ca96245ed874be676c46ba597",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "852f013e03624590bd3dc9f70dd9cc66",
+      "Id": "13346b8ecd684d85aa60d975bde0d91d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "7a59ee62c9bf4026ac6fc133620c10bf",
+      "Id": "8236d3b9c63c4c6794deae1f2d37aa6a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "e5f3ebe9933d4a7f8fbbfb298d707d83",
+      "Id": "ce4295f1cc684a42adc70427a275d0ce",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "aa6d11633b294b898386ac498f501cf2",
+      "Id": "e5bf3fa39b904a4e8c4de14e273cde2e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "419cf868fdd34470adcabe44d05f5fbe",
+      "Id": "04ca2593feff4f60b079d13a46df84f3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "acd16880f3b245c3af5ad31df96b7681",
+      "Id": "53f3a456fedf4eb0951785909a9704ea",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "b53b55c5f14d435e9da65d44d7422c38",
+      "Id": "dbda34706b004f61bacc6af6ed59042a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "d8b153dbb1614ecab0b853d401a70f7a",
+      "Id": "35f8fbb3b443416099207ac7f2e86cca",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9936874c091b4ad38e30711f7dc2f592",
+      "End": "6ed5e2b8c05a4a358a6ef45c5311dfb6",
+      "Id": "f0bf1997742c47ea91faa9ed89d017d7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "3b89c0db22b94c578dfed60c818b3fdd",
+      "Id": "0a95b30ef1254bd8b98a02c78cf8949b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "31abd96636f64c389f656fbd66c95b82",
+      "Id": "1b83b5fc0576425e8c0835aa1785cf7e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "ead06ed753d04eeeb5c40dde56231a27",
+      "Id": "721a67884af446ba96f9f745a7e8b8ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "51037b7beab1430c8328aea4dc871bc7",
+      "Id": "77cfdfa4a7c0428d858618e36232457d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "d59b1b7ca3eb4bc8ae30866dab485e64",
+      "Id": "119b7f07caf5485fb9348d3b8ae7e5fa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "775c489cfdbc4a7b9cc46922e85b5b20",
+      "Id": "f460757b67bf4af8a0af4ac5864c1f8b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "0ab2ef5699a74844bb08282013382c7c",
+      "Id": "68079e0195714357a6fcbb1ee7b9378f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "4de003e414d24341a997a3670bd601fe",
+      "Id": "48cadae004144638ad9d5c462a362440",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "48461adc917641cb8a6c9e303f168387",
+      "Id": "ffc169e15c8d4fc6a1a474111704232c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "059400d070a1440d8f9dcf74a58c7402",
+      "Id": "18fb55e5c6bb4983bdc92218f2cb99e2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "7388effd42f24b17bf83eeb65173fd0f",
+      "Id": "120f3dba2f4f4f9fb03f386d34f9a60c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "edc65f6493dc40558c1c94f72296e98f",
+      "Id": "b6e26e80f3b94e7a88d9d9717c9b38aa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d4ccfb332f94edb986fd3aa8f616098",
+      "End": "f224bfe2dc674db284069bb1579c24ad",
+      "Id": "91f87f429e804f8383e08870ed923f5c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "082e61db42cc4c7f881be4492547ad3c",
+      "End": "b9b3a8bc9474433096715dc33f8ee85f",
+      "Id": "143c4d97ff4046eb8bad0fa6d6dc8ae0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e7d38b8278841ef84d2e24c0d000570",
+      "End": "96fdf3ce76924789a3f0cddf257be615",
+      "Id": "500433c35bcb455fbf094149c663e6cf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e7d38b8278841ef84d2e24c0d000570",
+      "End": "7fcba7f438ee43d8a2909bea01b629ac",
+      "Id": "cf34c1160c3b473eb4b0f56c0acbcdd9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9d3d472b57c140109dd0d8a1d81c05d0",
+      "End": "3bbd858e2ca84673911e48525c4e69de",
+      "Id": "fab883f295934927bfa756b98586eeee",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9d3d472b57c140109dd0d8a1d81c05d0",
+      "End": "e1286175e16548afa1b2ad58fc40bfc6",
+      "Id": "49060570d99d47dc9fe74db1b9138979",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e95845cfaea241bd89cdbbfdca78c835",
+      "End": "c1d9a8aacc73435bade18d829740148a",
+      "Id": "6952d751db9d40c7bcf56d08a9dea6c4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "83146df7f8764ca49468e67c77ed3332",
+      "End": "72da425bd41e4be293f3e3fe1908a048",
+      "Id": "2d956b4f045b42a9a134f9430a726464",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8cfe57c25b694942ba0d5ec275efca6d",
+      "End": "060ae573c9f742b9865894b15188c031",
+      "Id": "283bc7924b6749c493b3b4ae6e8c00a4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "40ce2992579a4176bdd9f622792118c8",
+      "End": "38da0d0834d64e2eb123f1fd6942a5c0",
+      "Id": "7d70edb413b24c6e89a74cabb753c4d4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "633eb4dbd67b4fccb66ae29a4fba9d59",
+      "End": "7a952abef6804d0aad1c0b581614779f",
+      "Id": "fef3998790904727a967cd4279f169ce",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1ff221d1b684450c9f9ea49ebc9d27f1",
+      "End": "eb84ca6c6839470eb2ea9b82c4e8d11e",
+      "Id": "d51ee115e36d46789c2897276f927a43",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a586d4bc4a714226a69f821b6750e27f",
+      "End": "a5e61693973b4d02bea4c5d0df1a9fbc",
+      "Id": "bc4243d4ba544f1d989b241c792f0ca0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e47cdb78cd3440b29492bd3b51dbb10b",
+      "End": "665a7ee279ea4694af68ed32841fdf6f",
+      "Id": "5c11b6cebe2e4c1392e282b78def08c5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f86c5406cb66431294aab72dc2f7ff55",
+      "End": "9b8047db986d4fafb06cc3dff12abde6",
+      "Id": "69d9e8ab660144ad80883a4fce9bd179",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "72d2833a67d440e9a88ddeabc9529c3c",
+      "End": "57add9ed7406473e9bc66792277abf3c",
+      "Id": "21598a7f2e154639821e260ea80da2d8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "55df8f99c26b435c911c08c2c6dd19dd",
+      "End": "58bd417a7b034ecfb2ed65c6771ead10",
+      "Id": "38700f5d6b544c7abfa1994ff682ca9c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3198ec1227504f4ebc233757123f0d11",
+      "End": "f29849ec7b4549978885c6d55acd197d",
+      "Id": "b7dad37217b84d20a61f1b112113d666",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "048771184b3743daa054bea2a5205817",
+      "End": "c5f9c59259e847aca0145a2bb4527a48",
+      "Id": "e0a94ed07806443b86984ead8ac5ea8f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "92fb58f792664a77a4f3eeaff2011ec2",
+      "End": "ca4dbc5b00e14389860a05b897983d75",
+      "Id": "cb6acd2e69f94141ba41c28f23128301",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b1ffda2c710146b0b2f364eb5aba140d",
+      "End": "068915daaeae4e5fb85eba83d6e3288d",
+      "Id": "37f2c6c470ef473eb3910179dbb6546e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "51d942d0373b44099c3a36b10864e27d",
+      "End": "3dd178fadba6450ba18a7481d8b2beb2",
+      "Id": "d65cb5e1394342769d2fb4273bec40a2",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 100.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 32.2047119140625,
+      "EyeY": 21.527603149414063,
+      "EyeZ": -28.125053405761719,
+      "LookX": 0.5535736083984375,
+      "LookY": -29.602550506591797,
+      "LookZ": 17.512374877929688,
+      "UpX": 0.023107321932911873,
+      "UpY": 0.68199920654296875,
+      "UpZ": 0.7309877872467041
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Element.Geometry",
+        "ShowGeometry": true,
+        "Id": "9ef89fac4dc043d581245870e29ed393",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2608.2580559862222,
+        "Y": 719.174800796281
+      },
+      {
+        "Name": "Curve.Length",
+        "ShowGeometry": true,
+        "Id": "b5062289a47f472aa5ecb570cbee06ec",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1940.2378746051224,
+        "Y": 275.979956202709
+      },
+      {
+        "Name": "space",
+        "ShowGeometry": true,
+        "Id": "580dc9bd04fd494585ef0076e62acb77",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3118.8060847429333,
+        "Y": 84.237234460540776
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "9048b809798e4699a726ce7a3317a66c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1864.1196061390824,
+        "Y": 17.966260231488832
+      },
+      {
+        "Name": "Curve.PointAtSegmentLength",
+        "ShowGeometry": true,
+        "Id": "2c12217ed69848b88a8db0e8e8036272",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": -1185.4902097094832,
+        "Y": 48.149945955218755
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "c17f991fbbef42d28d8e6ff428a0b896",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1781.6461476793324,
+        "Y": -230.06015452573797
+      },
+      {
+        "Name": "FamilyInstance.ByPoint",
+        "ShowGeometry": true,
+        "Id": "dd8eff63ad6042babb399d979f605b1a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -142.91204502480741,
+        "Y": 101.80321422753468
+      },
+      {
+        "Name": "Select Model Elements",
+        "ShowGeometry": true,
+        "Id": "6dcfc5f00c8f48c3b127aacb585dfa20",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3035.5950916380934,
+        "Y": -553.7432161112979
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "c00421f854f744478999b309e036a11a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2318.8329937348726,
+        "Y": -1248.7674889275779
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "5f96bbf9eac640088f5cac75311534e5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -593.41952289954725,
+        "Y": 283.58887571962509
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "688981dc138c4637bf961953dfd4ab12",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -751.41714543211128,
+        "Y": -340.44126031160204
+      },
+      {
+        "Name": "Flowers",
+        "ShowGeometry": true,
+        "Id": "0cbcac2b63c244e5a69dcab800964246",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3165.8268981545448,
+        "Y": -1028.5427567543516
+      },
+      {
+        "Name": "Small Bush",
+        "ShowGeometry": true,
+        "Id": "c0bfca54c8894057951b38320e627f8d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3173.4920234216947,
+        "Y": -872.06521728114365
+      },
+      {
+        "Name": "Bush",
+        "ShowGeometry": true,
+        "Id": "f68ee1f2558d4068a0fb0f4c4814dff2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3150.900213593985,
+        "Y": -1189.6765733413356
+      },
+      {
+        "Name": "Select Model Elements",
+        "ShowGeometry": true,
+        "Id": "cccba1ebffa44b2bac53b80f424b74d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3127.1958700883965,
+        "Y": -2470.1589785176429
+      },
+      {
+        "Name": "Element.Geometry",
+        "ShowGeometry": true,
+        "Id": "b5b35bb7f1564c88b2afe37ffe6392a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2532.1783108965478,
+        "Y": -2044.9603866346924
+      },
+      {
+        "Name": "space",
+        "ShowGeometry": true,
+        "Id": "eb5eaca2e30f47128382676cbcad8e31",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2252.2739460713215,
+        "Y": -2341.3305126985128
+      },
+      {
+        "Name": "FamilyInstance.ByPoint",
+        "ShowGeometry": true,
+        "Id": "e0b14520cee945b6af39728a79324972",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 164.4658898048624,
+        "Y": -2204.7708805381617
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "108b2f4e92444932a5b75484fba671f4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -189.10067401355263,
+        "Y": -2339.3351965309521
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "a75f94c854c04e58851c3d739c75a449",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1555.135595816573,
+        "Y": -2275.1829077079492
+      },
+      {
+        "Name": "Curve.PointAtSegmentLength",
+        "ShowGeometry": false,
+        "Id": "f5c7bc9cfcb64ca1afe67456d3a87619",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": -1861.6967903978084,
+        "Y": -1845.872674272538
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "8e69c56ee2674510a128d352fc1debb4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1871.4224445719155,
+        "Y": -2571.9470387281544
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "526e064dc1fb4723a1812ae51725a81f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2151.1476737576622,
+        "Y": -2817.1241718782167
+      },
+      {
+        "Name": "Curve.Length",
+        "ShowGeometry": true,
+        "Id": "f4a933149c524c21afa3070a988afd76",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2519.7843449375491,
+        "Y": -2431.7356977908094
+      },
+      {
+        "Name": "Polygon.ByPoints",
+        "ShowGeometry": true,
+        "Id": "9f87cbc575b141b8aadd2b5f18d6020c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1286.0184617028385,
+        "Y": -2372.7116700829438
+      },
+      {
+        "Name": "Surface.ByPatch",
+        "ShowGeometry": true,
+        "Id": "3785a5958581430da63c39de29763403",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -919.7262919625532,
+        "Y": -2274.1670892660486
+      },
+      {
+        "Name": "Surface.PointAtParameter",
+        "ShowGeometry": true,
+        "Id": "d8ee15e9287e41a99e7bcaf09940fffd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -287.33320936590826,
+        "Y": -1972.4397217337428
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "5bcb7f5392134775992c08d93ecd8158",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -913.146046131201,
+        "Y": -1842.8625764830622
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "99eb160744084a3081d9ecf82310fe5c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -848.0591309424949,
+        "Y": -1677.3558492889231
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "7c3e2702efaa44a9b92c00cae0047d79",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -568.956142265868,
+        "Y": -1674.1800545867789
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "775c1a5c549a4e299399dfae7b30c703",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -597.56996107664781,
+        "Y": -1891.7563139318827
+      },
+      {
+        "Name": "Number Slider",
+        "ShowGeometry": true,
+        "Id": "8f0dfd98838c4695bc2002460187e987",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3118.6292405047816,
+        "Y": -2058.3578431621349
+      },
+      {
+        "Name": "Number Slider",
+        "ShowGeometry": true,
+        "Id": "2446c8501b8e47e0b19cc0e75b9a065f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3146.8625558356161,
+        "Y": -1852.3554903073054
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "0c3204f2bb2141f3baf6211ce1431402",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 91.3757191693935,
+        "Y": -2007.6303408333374
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6474f5738ea44dbc8dd90e2b0383c0a4",
+        "Title": "1-Adding Families",
+        "DescriptionText": " ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "0cbcac2b63c244e5a69dcab800964246",
+          "c0bfca54c8894057951b38320e627f8d",
+          "f68ee1f2558d4068a0fb0f4c4814dff2",
+          "aaf3d301a9ac4983883fc9f28a9de97b"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3510.887969150845,
+        "Top": -1262.6765733413356,
+        "Width": 733.3959457291503,
+        "Height": 522.611356060192,
+        "FontSize": 36.0,
+        "InitialTop": -1189.6765733413356,
+        "InitialHeight": 462.61135606019,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "15789d17506c4c2a9661d6ddfa9a7ec6",
+        "Title": "2-Select Shrubs Area",
+        "DescriptionText": " ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "6dcfc5f00c8f48c3b127aacb585dfa20",
+          "239bcba471c842838c28cf3dd4990f96"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3535.7170523642121,
+        "Top": -626.7432161112979,
+        "Width": 754.12196072611869,
+        "Height": 347.75622108247171,
+        "FontSize": 36.0,
+        "InitialTop": -553.7432161112979,
+        "InitialHeight": 355.75622108247171,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ba92e98d9e3d4023b8459a266cc46fd3",
+        "Title": "3- Adjust The Spacing",
+        "DescriptionText": " ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "580dc9bd04fd494585ef0076e62acb77",
+          "b2ff9c73744447c1aac0144bd54c513c"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3486.5140533384274,
+        "Top": -56.015106259562344,
+        "Width": 725.70796859549409,
+        "Height": 272.25234072010312,
+        "FontSize": 36.0,
+        "InitialTop": 16.984893740437656,
+        "InitialHeight": 167.61291149541398,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ff994f721b614538b18c31c6799bfd1c",
+        "Title": "Script Components",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "9ef89fac4dc043d581245870e29ed393",
+          "b5062289a47f472aa5ecb570cbee06ec",
+          "9048b809798e4699a726ce7a3317a66c",
+          "c17f991fbbef42d28d8e6ff428a0b896",
+          "dd8eff63ad6042babb399d979f605b1a",
+          "c00421f854f744478999b309e036a11a",
+          "5f96bbf9eac640088f5cac75311534e5",
+          "688981dc138c4637bf961953dfd4ab12",
+          "2c12217ed69848b88a8db0e8e8036272"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2618.2580559862222,
+        "Top": -1321.7674889275779,
+        "Width": 2766.3460109614148,
+        "Height": 2184.9422897238592,
+        "FontSize": 36.0,
+        "InitialTop": -1248.7674889275779,
+        "InitialHeight": 2012.75805160705,
+        "TextblockHeight": 63.0,
+        "Background": "#FFBB87C6"
+      },
+      {
+        "Id": "b5cde46a5c5a494ca7971c3fd55d9f2c",
+        "Title": "#The Path",
+        "DescriptionText": " ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "aa2e84aaf87b4a648c169ddf8d39c754"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3453.6798340111,
+        "Top": -1460.27123503723,
+        "Width": 512.0,
+        "Height": 122.0,
+        "FontSize": 36.0,
+        "InitialTop": -1387.27123503723,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "9a266e49ebb049f2b1b45c5b79117c7b",
+        "Title": "Script Components",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "eb5eaca2e30f47128382676cbcad8e31",
+          "e0b14520cee945b6af39728a79324972",
+          "108b2f4e92444932a5b75484fba671f4",
+          "a75f94c854c04e58851c3d739c75a449",
+          "f5c7bc9cfcb64ca1afe67456d3a87619",
+          "8e69c56ee2674510a128d352fc1debb4",
+          "526e064dc1fb4723a1812ae51725a81f",
+          "f4a933149c524c21afa3070a988afd76",
+          "9f87cbc575b141b8aadd2b5f18d6020c",
+          "3785a5958581430da63c39de29763403",
+          "d8ee15e9287e41a99e7bcaf09940fffd",
+          "5bcb7f5392134775992c08d93ecd8158",
+          "99eb160744084a3081d9ecf82310fe5c",
+          "7c3e2702efaa44a9b92c00cae0047d79",
+          "775c1a5c549a4e299399dfae7b30c703",
+          "0c3204f2bb2141f3baf6211ce1431402",
+          "b5b35bb7f1564c88b2afe37ffe6392a1"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2542.1783108965478,
+        "Top": -2890.1241718782167,
+        "Width": 2997.64420070141,
+        "Height": 1347.9441172914378,
+        "FontSize": 36.0,
+        "InitialTop": -2817.1241718782167,
+        "InitialHeight": 1304.9441172914378,
+        "TextblockHeight": 63.0,
+        "Background": "#FFBB87C6"
+      },
+      {
+        "Id": "982af70de57942869ab09fa7b97f61da",
+        "Title": "#Scatering Area",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "6daf9033c8854d3b98350a68cb6e2306"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3434.0757617024046,
+        "Top": -2853.735201062445,
+        "Width": 316.0,
+        "Height": 122.0,
+        "FontSize": 36.0,
+        "InitialTop": -2780.735201062445,
+        "InitialHeight": 79.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "1e0a77113c984b648ee6fdb2a36f4ccf",
+        "Title": "1- Selecting Path",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "cccba1ebffa44b2bac53b80f424b74d9",
+          "853f526ebf8c4c769bbc1a215bd93d5b"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3471.2727111155987,
+        "Top": -2543.1589785176429,
+        "Width": 598.07684102720214,
+        "Height": 224.0,
+        "FontSize": 36.0,
+        "InitialTop": -2470.1589785176429,
+        "InitialHeight": 231.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "91d2fa0b24374066b4bcad65c03d5994",
+        "Title": "2-Adjust The Number Of Shrubs",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8f0dfd98838c4695bc2002460187e987",
+          "2446c8501b8e47e0b19cc0e75b9a065f",
+          "3aefa9acd7b04afc9479e8b0592f8f04"
+        ],
+        "HasNestedGroups": false,
+        "Left": -3435.5180081095928,
+        "Top": -2131.3578431621349,
+        "Width": 674.88876760481116,
+        "Height": 411.0023528548295,
+        "FontSize": 36.0,
+        "InitialTop": -2058.3578431621349,
+        "InitialHeight": 368.00235285482972,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "aaf3d301a9ac4983883fc9f28a9de97b",
+        "Title": "# First : add The  Shrubs Families  in each Family Type by Name ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3500.887969150845,
+        "Top": -989.17954672016469,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "239bcba471c842838c28cf3dd4990f96",
+        "Title": "# Secound : Pick Shrubs Area With Model line Tool with Offset of 10\"",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3525.7170523642121,
+        "Top": -334.98699502882619,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b2ff9c73744447c1aac0144bd54c513c",
+        "Title": "# Third : Adjust Spacing Between the Shrubs ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3476.5140533384274,
+        "Top": 24.984893740437656,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "aa2e84aaf87b4a648c169ddf8d39c754",
+        "Title": "                 First step                                                                                                                ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3443.6798340111,
+        "Top": -1379.27123503723,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6daf9033c8854d3b98350a68cb6e2306",
+        "Title": "First Step                                                                    ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3424.0757617024046,
+        "Top": -2772.735201062445,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "853f526ebf8c4c769bbc1a215bd93d5b",
+        "Title": "# First : Pick Shrubs Area With Model line Tool with Offset of 20\"",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3461.2727111155987,
+        "Top": -2402.3359043543469,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3aefa9acd7b04afc9479e8b0592f8f04",
+        "Title": "# Secound : Adjust The Number Of Shrubs and remove the extra Shrubs ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -3425.5180081095928,
+        "Top": -1920.0210891862544,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 657.50479379002445,
+    "Y": 585.42549848449335,
+    "Zoom": 0.158563240287872
+  }
+}
